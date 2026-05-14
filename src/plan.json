@@ -1,0 +1,1053 @@
+{
+  "reading_plan_title": "2-Year Bible Reading Plan",
+  "years": [
+    {
+      "year": 1,
+      "weeks": [
+        {
+          "week_number": 1,
+          "readings": [
+            { "ot": "Gen 1", "nt": "Matt 1", "psalm_proverb": "Ps 1" },
+            { "ot": "Gen 2", "nt": "Matt 2", "psalm_proverb": "Ps 2" },
+            { "ot": "Gen 3", "nt": "Matt 3", "psalm_proverb": "Prov 1:1-7" },
+            { "ot": "Gen 4-5", "nt": "Matt 4", "psalm_proverb": "Prov 1:8-19" },
+            { "ot": "Gen 6-7", "nt": "Matt 5", "psalm_proverb": "Ps 3" }
+          ]
+        },
+        {
+          "week_number": 2,
+          "readings": [
+            { "ot": "Gen 8-9", "nt": "Matt 6", "psalm_proverb": "Ps 4" },
+            { "ot": "Gen 10-11", "nt": "Matt 7", "psalm_proverb": "Prov 1:20-33" },
+            { "ot": "Gen 12-13", "nt": "Matt 8", "psalm_proverb": "Ps 5" },
+            { "ot": "Gen 14-15", "nt": "Matt 9", "psalm_proverb": "Ps 6" },
+            { "ot": "Gen 16-17", "nt": "Matt 10", "psalm_proverb": "Prov 2:1-8" }
+          ]
+        },
+        {
+          "week_number": 3,
+          "readings": [
+            { "ot": "Gen 18", "nt": "Matt 11", "psalm_proverb": "Prov 2:9-15" },
+            { "ot": "Gen 19", "nt": "Matt 12", "psalm_proverb": "Ps 7" },
+            { "ot": "Gen 20-21", "nt": "Matt 13", "psalm_proverb": "Ps 8" },
+            { "ot": "Gen 22-23", "nt": "Matt 14", "psalm_proverb": "Prov 2:16-19" },
+            { "ot": "Gen 24", "nt": "Matt 15", "psalm_proverb": "Prov 2:20-22" }
+          ]
+        },
+        {
+          "week_number": 4,
+          "readings": [
+            { "ot": "Gen 25-26", "nt": "Matt 16", "psalm_proverb": "Ps 9" },
+            { "ot": "Gen 27", "nt": "Matt 17", "psalm_proverb": "Ps 10" },
+            { "ot": "Gen 28", "nt": "Matt 18", "psalm_proverb": "Prov 3:1-8" },
+            { "ot": "Gen 29", "nt": "Matt 19", "psalm_proverb": "Ps 11" },
+            { "ot": "Gen 30", "nt": "Matt 20", "psalm_proverb": "Ps 12" }
+          ]
+        },
+        {
+          "week_number": 5,
+          "readings": [
+            { "ot": "Gen 31", "nt": "Matt 21", "psalm_proverb": "Prov 3:9-10" },
+            { "ot": "Gen 32-33", "nt": "Matt 22", "psalm_proverb": "Ps 13" },
+            { "ot": "Gen 34-35", "nt": "Matt 23", "psalm_proverb": "Prov 3:11-18" },
+            { "ot": "Gen 36-37", "nt": "Matt 24", "psalm_proverb": "Ps 14" },
+            { "ot": "Gen 38", "nt": "Matt 25", "psalm_proverb": "Prov 3:19-27" }
+          ]
+        },
+        {
+          "week_number": 6,
+          "readings": [
+            { "ot": "Gen 39-40", "nt": "Matt 26", "psalm_proverb": "Ps 15" },
+            { "ot": "Gen 41", "nt": "Matt 27", "psalm_proverb": "Prov 3:28-35" },
+            { "ot": "Gen 42", "nt": "Matt 28", "psalm_proverb": "Ps 16" },
+            { "ot": "Gen 43", "nt": "Mark 1", "psalm_proverb": "Prov 4:1-9" },
+            { "ot": "Gen 44", "nt": "Mark 2", "psalm_proverb": "Ps 17" }
+          ]
+        },
+        {
+          "week_number": 7,
+          "readings": [
+            { "ot": "Gen 45-46", "nt": "Mark 3", "psalm_proverb": "Ps 18" },
+            { "ot": "Gen 47-48", "nt": "Mark 4", "psalm_proverb": "Prov 4:10-19" },
+            { "ot": "Gen 49-50", "nt": "Mark 5", "psalm_proverb": "Ps 19" },
+            { "ot": "Ex 1-2", "nt": "Mark 6", "psalm_proverb": "Prov 4:20-27" },
+            { "ot": "Ex 3", "nt": "Mark 7", "psalm_proverb": "Ps 20" }
+          ]
+        },
+        {
+          "week_number": 8,
+          "readings": [
+            { "ot": "Ex 4", "nt": "Mark 8", "psalm_proverb": "Ps 21" },
+            { "ot": "Ex 5-6", "nt": "Mark 9", "psalm_proverb": "Prov 5:1-6" },
+            { "ot": "Ex 7-8", "nt": "Mark 10", "psalm_proverb": "Ps 22" },
+            { "ot": "Ex 9", "nt": "Mark 11", "psalm_proverb": "Prov 5:7-14" },
+            { "ot": "Ex 10-11", "nt": "Mark 12", "psalm_proverb": "Ps 23" }
+          ]
+        },
+        {
+          "week_number": 9,
+          "readings": [
+            { "ot": "Ex 12", "nt": "Mark 13", "psalm_proverb": "Ps 24" },
+            { "ot": "Ex 13", "nt": "Mark 14", "psalm_proverb": "Prov 5:15-23" },
+            { "ot": "Ex 14", "nt": "Mark 15", "psalm_proverb": "Ps 25" },
+            { "ot": "Ex 15", "nt": "Mark 16", "psalm_proverb": "Prov 6:1-5" },
+            { "ot": "Ex 16-17", "nt": "Luke 1", "psalm_proverb": "Ps 26" }
+          ]
+        },
+        {
+          "week_number": 10,
+          "readings": [
+            { "ot": "Ex 18", "nt": "Luke 2", "psalm_proverb": "Prov 6:6-11" },
+            { "ot": "Ex 19", "nt": "Luke 3", "psalm_proverb": "Ps 27" },
+            { "ot": "Ex 20", "nt": "Luke 4", "psalm_proverb": "Prov 6:12-15" },
+            { "ot": "Ex 21", "nt": "Luke 5", "psalm_proverb": "Ps 28" },
+            { "ot": "Ex 22", "nt": "Luke 6", "psalm_proverb": "Prov 6:16-19" }
+          ]
+        },
+        {
+          "week_number": 11,
+          "readings": [
+            { "ot": "Ex 23-24", "nt": "Luke 7", "psalm_proverb": "Ps 29" },
+            { "ot": "Ex 25", "nt": "Luke 8", "psalm_proverb": "Prov 6:20-35" },
+            { "ot": "Ex 26-27", "nt": "Luke 9", "psalm_proverb": "Ps 30" },
+            { "ot": "Ex 28", "nt": "Luke 10", "psalm_proverb": "Prov 7:1-5" },
+            { "ot": "Ex 29", "nt": "Luke 11", "psalm_proverb": "Ps 31" }
+          ]
+        },
+        {
+          "week_number": 12,
+          "readings": [
+            { "ot": "Ex 30", "nt": "Luke 12", "psalm_proverb": "Prov 7:6-20" },
+            { "ot": "Ex 31-32", "nt": "Luke 13", "psalm_proverb": "Ps 32" },
+            { "ot": "Ex 33", "nt": "Luke 14", "psalm_proverb": "Prov 7:21-27" },
+            { "ot": "Ex 34", "nt": "Luke 15", "psalm_proverb": "Ps 33" },
+            { "ot": "Ex 35", "nt": "Luke 16", "psalm_proverb": "Ps 34" }
+          ]
+        },
+        {
+          "week_number": 13,
+          "readings": [
+            { "ot": "Ex 36", "nt": "Luke 17", "psalm_proverb": "Prov 8:1-11" },
+            { "ot": "Ex 37-38", "nt": "Luke 18", "psalm_proverb": "Ps 35" },
+            { "ot": "Ex 39", "nt": "Luke 19", "psalm_proverb": "Prov 8:12-21" },
+            { "ot": "Ex 40", "nt": "Luke 20", "psalm_proverb": "Prov 8:22-31" },
+            { "ot": "Lev 1-2", "nt": "Luke 21", "psalm_proverb": "Prov 8:32-36" }
+          ]
+        },
+        {
+          "week_number": 14,
+          "readings": [
+            { "ot": "Lev 3-4", "nt": "Luke 22", "psalm_proverb": "Ps 36" },
+            { "ot": "Lev 5", "nt": "Luke 23", "psalm_proverb": "Ps 37" },
+            { "ot": "Lev 6", "nt": "Luke 24", "psalm_proverb": "Ps 38" },
+            { "ot": "Lev 7", "nt": "John 1", "psalm_proverb": "Ps 39" },
+            { "ot": "Lev 8", "nt": "John 2", "psalm_proverb": "Ps 40" }
+          ]
+        },
+        {
+          "week_number": 15,
+          "readings": [
+            { "ot": "Lev 9-10", "nt": "John 3", "psalm_proverb": "Ps 41" },
+            { "ot": "Lev 11-12", "nt": "John 4", "psalm_proverb": "Prov 9:1-6" },
+            { "ot": "Lev 13", "nt": "John 5", "psalm_proverb": "Prov 9:7-9" },
+            { "ot": "Lev 14", "nt": "John 6", "psalm_proverb": "Prov 9:10-12" },
+            { "ot": "Lev 15", "nt": "John 7", "psalm_proverb": "Prov 9:13-18" }
+          ]
+        },
+        {
+          "week_number": 16,
+          "readings": [
+            { "ot": "Lev 16", "nt": "John 8", "psalm_proverb": "Prov 10:1-11" },
+            { "ot": "Lev 17-18", "nt": "John 9", "psalm_proverb": "Ps 42" },
+            { "ot": "Lev 19", "nt": "John 10", "psalm_proverb": "Prov 10:12-21" },
+            { "ot": "Lev 20-21", "nt": "John 11", "psalm_proverb": "Ps 43" },
+            { "ot": "Lev 22", "nt": "John 12", "psalm_proverb": "Prov 10:22-25" }
+          ]
+        },
+        {
+          "week_number": 17,
+          "readings": [
+            { "ot": "Lev 23", "nt": "John 13", "psalm_proverb": "Ps 44" },
+            { "ot": "Lev 24", "nt": "John 14", "psalm_proverb": "Prov 10:26-32" },
+            { "ot": "Lev 25", "nt": "John 15", "psalm_proverb": "Ps 45" },
+            { "ot": "Lev 26", "nt": "John 16", "psalm_proverb": "Prov 11:1-7" },
+            { "ot": "Lev 27", "nt": "John 17", "psalm_proverb": "Ps 46" }
+          ]
+        },
+        {
+          "week_number": 18,
+          "readings": [
+            { "ot": "Num 1", "nt": "John 18", "psalm_proverb": "Ps 47" },
+            { "ot": "Num 2", "nt": "John 19", "psalm_proverb": "Prov 11:8-14" },
+            { "ot": "Num 3", "nt": "John 20", "psalm_proverb": "Ps 48" },
+            { "ot": "Num 4", "nt": "John 21", "psalm_proverb": "Prov 11:15-20" },
+            { "ot": "Num 5", "nt": "Acts 1", "psalm_proverb": "Ps 49" }
+          ]
+        },
+        {
+          "week_number": 19,
+          "readings": [
+            { "ot": "Num 6", "nt": "Acts 2", "psalm_proverb": "Ps 50" },
+            { "ot": "Num 7", "nt": "Acts 3", "psalm_proverb": "Prov 11:21-31" },
+            { "ot": "Num 8-9", "nt": "Acts 4", "psalm_proverb": "Ps 51" },
+            { "ot": "Num 10", "nt": "Acts 5", "psalm_proverb": "Prov 12:1-8" },
+            { "ot": "Num 11-12", "nt": "Acts 6", "psalm_proverb": "Prov 12:9-14" }
+          ]
+        },
+        {
+          "week_number": 20,
+          "readings": [
+            { "ot": "Num 13", "nt": "Acts 7", "psalm_proverb": "Prov 12:15-28" },
+            { "ot": "Num 14", "nt": "Acts 8", "psalm_proverb": "Ps 52" },
+            { "ot": "Num 15", "nt": "Acts 9", "psalm_proverb": "Ps 53" },
+            { "ot": "Num 16-17", "nt": "Acts 10", "psalm_proverb": "Prov 13:1-11" },
+            { "ot": "Num 18", "nt": "Acts 11", "psalm_proverb": "Ps 54" }
+          ]
+        },
+        {
+          "week_number": 21,
+          "readings": [
+            { "ot": "Num 19-20", "nt": "Acts 12", "psalm_proverb": "Ps 55" },
+            { "ot": "Num 21", "nt": "Acts 13", "psalm_proverb": "Prov 13:12-18" },
+            { "ot": "Num 22", "nt": "Acts 14", "psalm_proverb": "Ps 56" },
+            { "ot": "Num 23", "nt": "Acts 15", "psalm_proverb": "Prov 13:19-25" },
+            { "ot": "Num 24-25", "nt": "Acts 16", "psalm_proverb": "Ps 57" }
+          ]
+        },
+        {
+          "week_number": 22,
+          "readings": [
+            { "ot": "Num 26", "nt": "Acts 17", "psalm_proverb": "Ps 58" },
+            { "ot": "Num 27-28", "nt": "Acts 18", "psalm_proverb": "Prov 14:1-10" },
+            { "ot": "Num 29", "nt": "Acts 19", "psalm_proverb": "Ps 59" },
+            { "ot": "Num 30", "nt": "Acts 20", "psalm_proverb": "Prov 14:11-14" },
+            { "ot": "Num 31", "nt": "Acts 21", "psalm_proverb": "Ps 60" }
+          ]
+        },
+        {
+          "week_number": 23,
+          "readings": [
+            { "ot": "Num 32", "nt": "Acts 22", "psalm_proverb": "Ps 61" },
+            { "ot": "Num 33", "nt": "Acts 23", "psalm_proverb": "Prov 14:15-25" },
+            { "ot": "Num 34-35", "nt": "Acts 24", "psalm_proverb": "Ps 62" },
+            { "ot": "Num 36-Deut 1", "nt": "Acts 25", "psalm_proverb": "Prov 14:26-35" },
+            { "ot": "Deut 2", "nt": "Acts 26", "psalm_proverb": "Ps 63" }
+          ]
+        },
+        {
+          "week_number": 24,
+          "readings": [
+            { "ot": "Deut 3", "nt": "Acts 27", "psalm_proverb": "Ps 64" },
+            { "ot": "Deut 4", "nt": "Acts 28", "psalm_proverb": "Prov 15:1-8" },
+            { "ot": "Deut 5-6", "nt": "Rom 1", "psalm_proverb": "Ps 65" },
+            { "ot": "Deut 7", "nt": "Rom 2", "psalm_proverb": "Prov 15:9-18" },
+            { "ot": "Deut 8", "nt": "Rom 3", "psalm_proverb": "Ps 66" }
+          ]
+        },
+        {
+          "week_number": 25,
+          "readings": [
+            { "ot": "Deut 9", "nt": "Rom 4", "psalm_proverb": "Ps 67" },
+            { "ot": "Deut 10", "nt": "Rom 5", "psalm_proverb": "Prov 15:19-26" },
+            { "ot": "Deut 11", "nt": "Rom 6", "psalm_proverb": "Ps 68" },
+            { "ot": "Deut 12", "nt": "Rom 7", "psalm_proverb": "Prov 15:27-33" },
+            { "ot": "Deut 13-14", "nt": "Rom 8", "psalm_proverb": "Ps 69" }
+          ]
+        },
+        {
+          "week_number": 26,
+          "readings": [
+            { "ot": "Deut 15", "nt": "Rom 9", "psalm_proverb": "Ps 70" },
+            { "ot": "Deut 16", "nt": "Rom 10", "psalm_proverb": "Prov 16:1-5" },
+            { "ot": "Deut 17", "nt": "Rom 11", "psalm_proverb": "Ps 71" },
+            { "ot": "Deut 18-19", "nt": "Rom 12", "psalm_proverb": "Prov 16:6-15" },
+            { "ot": "Deut 20-21", "nt": "Rom 13", "psalm_proverb": "Ps 72" }
+          ]
+        },
+        {
+          "week_number": 27,
+          "readings": [
+            { "ot": "Deut 22", "nt": "Rom 14", "psalm_proverb": "Ps 73" },
+            { "ot": "Deut 23-24", "nt": "Rom 15", "psalm_proverb": "Prov 16:16-24" },
+            { "ot": "Deut 25-26", "nt": "Rom 16", "psalm_proverb": "Ps 74" },
+            { "ot": "Deut 27", "nt": "1 Cor 1", "psalm_proverb": "Prov 16:25-33" },
+            { "ot": "Deut 28", "nt": "1 Cor 2", "psalm_proverb": "Ps 75" }
+          ]
+        },
+        {
+          "week_number": 28,
+          "readings": [
+            { "ot": "Deut 29-30", "nt": "1 Cor 3", "psalm_proverb": "Ps 76" },
+            { "ot": "Deut 31", "nt": "1 Cor 4", "psalm_proverb": "Ps 77" },
+            { "ot": "Deut 32", "nt": "1 Cor 5", "psalm_proverb": "Prov 17:1-12" },
+            { "ot": "Deut 33-34", "nt": "1 Cor 6", "psalm_proverb": "Ps 78" },
+            { "ot": "Josh 1-2", "nt": "1 Cor 7", "psalm_proverb": "Ps 79" }
+          ]
+        },
+        {
+          "week_number": 29,
+          "readings": [
+            { "ot": "Josh 3-4", "nt": "1 Cor 8", "psalm_proverb": "Ps 80" },
+            { "ot": "Josh 5", "nt": "1 Cor 9", "psalm_proverb": "Prov 17:13-20" },
+            { "ot": "Josh 6", "nt": "1 Cor 10", "psalm_proverb": "Ps 81" },
+            { "ot": "Josh 7", "nt": "1 Cor 11", "psalm_proverb": "Prov 17:21-28" },
+            { "ot": "Josh 8", "nt": "1 Cor 12", "psalm_proverb": "Ps 82" }
+          ]
+        },
+        {
+          "week_number": 30,
+          "readings": [
+            { "ot": "Josh 9", "nt": "1 Cor 13", "psalm_proverb": "Ps 83" },
+            { "ot": "Josh 10", "nt": "1 Cor 14", "psalm_proverb": "Prov 18:1-8" },
+            { "ot": "Josh 11-12", "nt": "1 Cor 15", "psalm_proverb": "Ps 84" },
+            { "ot": "Josh 13-14", "nt": "1 Cor 16", "psalm_proverb": "Prov 18:9-13" },
+            { "ot": "Josh 15-16", "nt": "2 Cor 1", "psalm_proverb": "Ps 85" }
+          ]
+        },
+        {
+          "week_number": 31,
+          "readings": [
+            { "ot": "Josh 17-18", "nt": "2 Cor 2", "psalm_proverb": "Ps 86" },
+            { "ot": "Josh 19-20", "nt": "2 Cor 3", "psalm_proverb": "Prov 18:14-15" },
+            { "ot": "Josh 21", "nt": "2 Cor 4", "psalm_proverb": "Ps 87" },
+            { "ot": "Josh 22", "nt": "2 Cor 5", "psalm_proverb": "Prov 18:16-24" },
+            { "ot": "Josh 23", "nt": "2 Cor 6", "psalm_proverb": "Ps 88" }
+          ]
+        },
+        {
+          "week_number": 32,
+          "readings": [
+            { "ot": "Josh 24", "nt": "2 Cor 7", "psalm_proverb": "Ps 89" },
+            { "ot": "Judg 1", "nt": "2 Cor 8", "psalm_proverb": "Prov 19:1-10" },
+            { "ot": "Judg 2", "nt": "2 Cor 9", "psalm_proverb": "Ps 90" },
+            { "ot": "Judg 3", "nt": "2 Cor 10", "psalm_proverb": "Prov 19:11-17" },
+            { "ot": "Judg 4", "nt": "2 Cor 11", "psalm_proverb": "Ps 91" }
+          ]
+        },
+        {
+          "week_number": 33,
+          "readings": [
+            { "ot": "Judg 5", "nt": "2 Cor 12", "psalm_proverb": "Ps 92" },
+            { "ot": "Judg 6", "nt": "2 Cor 13", "psalm_proverb": "Prov 19:18-23" },
+            { "ot": "Judg 7", "nt": "Gal 1", "psalm_proverb": "Ps 93" },
+            { "ot": "Judg 8", "nt": "Gal 2", "psalm_proverb": "Prov 19:24-29" },
+            { "ot": "Judg 9", "nt": "Gal 3", "psalm_proverb": "Ps 94" }
+          ]
+        },
+        {
+          "week_number": 34,
+          "readings": [
+            { "ot": "Judg 10", "nt": "Gal 4", "psalm_proverb": "Ps 95" },
+            { "ot": "Judg 11", "nt": "Gal 5", "psalm_proverb": "Prov 20:1-4" },
+            { "ot": "Judg 12-13", "nt": "Gal 6", "psalm_proverb": "Ps 96" },
+            { "ot": "Judg 14-15", "nt": "Eph 1", "psalm_proverb": "Prov 20:5-12" },
+            { "ot": "Judg 16", "nt": "Eph 2", "psalm_proverb": "Ps 97" }
+          ]
+        },
+        {
+          "week_number": 35,
+          "readings": [
+            { "ot": "Judg 17-18", "nt": "Eph 3", "psalm_proverb": "Ps 98" },
+            { "ot": "Judg 19", "nt": "Eph 4", "psalm_proverb": "Prov 20:13-23" },
+            { "ot": "Judg 20", "nt": "Eph 5", "psalm_proverb": "Ps 99" },
+            { "ot": "Judg 21", "nt": "Eph 6", "psalm_proverb": "Prov 20:24-30" },
+            { "ot": "Ruth 1", "nt": "Phil 1", "psalm_proverb": "Ps 100" }
+          ]
+        },
+        {
+          "week_number": 36,
+          "readings": [
+            { "ot": "Ruth 2", "nt": "Phil 2", "psalm_proverb": "Ps 101" },
+            { "ot": "Ruth 3-4", "nt": "Phil 3", "psalm_proverb": "Prov 21:1-10" },
+            { "ot": "1 Sam 1", "nt": "Phil 4", "psalm_proverb": "Ps 102" },
+            { "ot": "1 Sam 2", "nt": "Col 1", "psalm_proverb": "Prov 21:11-22" },
+            { "ot": "1 Sam 3-4", "nt": "Col 2", "psalm_proverb": "Ps 103" }
+          ]
+        },
+        {
+          "week_number": 37,
+          "readings": [
+            { "ot": "1 Sam 5-6", "nt": "Col 3", "psalm_proverb": "Ps 104" },
+            { "ot": "1 Sam 7-8", "nt": "Col 4", "psalm_proverb": "Prov 21:23-31" },
+            { "ot": "1 Sam 9", "nt": "1 Thess 1", "psalm_proverb": "Ps 105" },
+            { "ot": "1 Sam 10", "nt": "1 Thess 2", "psalm_proverb": "Prov 22:1-9" },
+            { "ot": "1 Sam 11-12", "nt": "1 Thess 3", "psalm_proverb": "Ps 106" }
+          ]
+        },
+        {
+          "week_number": 38,
+          "readings": [
+            { "ot": "1 Sam 13", "nt": "1 Thess 4", "psalm_proverb": "Ps 107" },
+            { "ot": "1 Sam 14", "nt": "1 Thess 5", "psalm_proverb": "Prov 22:10-16" },
+            { "ot": "1 Sam 15", "nt": "2 Thess 1", "psalm_proverb": "Ps 108" },
+            { "ot": "1 Sam 16", "nt": "2 Thess 2", "psalm_proverb": "Prov 22:17-21" },
+            { "ot": "1 Sam 17", "nt": "2 Thess 3", "psalm_proverb": "Ps 109" }
+          ]
+        },
+        {
+          "week_number": 39,
+          "readings": [
+            { "ot": "1 Sam 18-19", "nt": "1 Tim 1", "psalm_proverb": "Ps 110" },
+            { "ot": "1 Sam 20", "nt": "1 Tim 2", "psalm_proverb": "Prov 22:22-29" },
+            { "ot": "1 Sam 21", "nt": "1 Tim 3", "psalm_proverb": "Ps 111" },
+            { "ot": "1 Sam 22", "nt": "1 Tim 4", "psalm_proverb": "Prov 23:1-8" },
+            { "ot": "1 Sam 23-24", "nt": "1 Tim 5", "psalm_proverb": "Ps 112" }
+          ]
+        },
+        {
+          "week_number": 40,
+          "readings": [
+            { "ot": "1 Sam 25", "nt": "1 Tim 6", "psalm_proverb": "Ps 113" },
+            { "ot": "1 Sam 26-27", "nt": "2 Tim 1", "psalm_proverb": "Prov 23:9-28" },
+            { "ot": "1 Sam 28-29", "nt": "2 Tim 2", "psalm_proverb": "Ps 114" },
+            { "ot": "1 Sam 30-31", "nt": "2 Tim 3", "psalm_proverb": "Prov 23:29-35" },
+            { "ot": "2 Sam 1", "nt": "2 Tim 4", "psalm_proverb": "Ps 115" }
+          ]
+        },
+        {
+          "week_number": 41,
+          "readings": [
+            { "ot": "2 Sam 2", "nt": "Tit 1", "psalm_proverb": "Ps 116" },
+            { "ot": "2 Sam 3", "nt": "Tit 2", "psalm_proverb": "Prov 24:1-9" },
+            { "ot": "2 Sam 4-5", "nt": "Tit 3", "psalm_proverb": "Ps 117" },
+            { "ot": "2 Sam 6-7", "nt": "Philemon", "psalm_proverb": "Prov 24:10-16" },
+            { "ot": "2 Sam 8-9", "nt": "Heb 1", "psalm_proverb": "Ps 118" }
+          ]
+        },
+        {
+          "week_number": 42,
+          "readings": [
+            { "ot": null, "nt": "Heb 2", "psalm_proverb": "Ps 119" },
+            { "ot": "2 Sam 10-11", "nt": "Heb 3", "psalm_proverb": "Prov 24:17-22" },
+            { "ot": "2 Sam 12", "nt": "Heb 4", "psalm_proverb": "Prov 24:23-29" },
+            { "ot": "2 Sam 13", "nt": "Heb 5", "psalm_proverb": "Prov 24:30-34" },
+            { "ot": "2 Sam 14", "nt": "Heb 6", "psalm_proverb": "Ps 120" }
+          ]
+        },
+        {
+          "week_number": 43,
+          "readings": [
+            { "ot": "2 Sam 15", "nt": "Heb 7", "psalm_proverb": "Ps 121" },
+            { "ot": "2 Sam 16", "nt": "Heb 8", "psalm_proverb": "Prov 25:1-10" },
+            { "ot": "2 Sam 17", "nt": "Heb 9", "psalm_proverb": "Ps 122" },
+            { "ot": "2 Sam 18", "nt": "Heb 10", "psalm_proverb": "Prov 25:11-28" },
+            { "ot": "2 Sam 19", "nt": "Heb 11", "psalm_proverb": "Ps 123" }
+          ]
+        },
+        {
+          "week_number": 44,
+          "readings": [
+            { "ot": "2 Sam 20", "nt": "Heb 12", "psalm_proverb": "Ps 124" },
+            { "ot": "2 Sam 21", "nt": "Heb 13", "psalm_proverb": "Prov 26:1-12" },
+            { "ot": "2 Sam 22", "nt": "James 1", "psalm_proverb": "Ps 125" },
+            { "ot": "2 Sam 23", "nt": "James 2", "psalm_proverb": "Prov 26:13-20" },
+            { "ot": "2 Sam 24", "nt": "James 3", "psalm_proverb": "Ps 126" }
+          ]
+        },
+        {
+          "week_number": 45,
+          "readings": [
+            { "ot": "1 Kings 1", "nt": "James 4", "psalm_proverb": "Ps 127" },
+            { "ot": "1 Kings 2", "nt": "James 5", "psalm_proverb": "Prov 26:21-28" },
+            { "ot": "1 Kings 3", "nt": "1 Pet 1", "psalm_proverb": "Ps 128" },
+            { "ot": "1 Kings 4", "nt": "1 Pet 2", "psalm_proverb": "Prov 27:1-11" },
+            { "ot": "1 Kings 5-6", "nt": "1 Pet 3", "psalm_proverb": "Ps 129" }
+          ]
+        },
+        {
+          "week_number": 46,
+          "readings": [
+            { "ot": "1 Kings 7", "nt": "1 Pet 4", "psalm_proverb": "Ps 130" },
+            { "ot": "1 Kings 8", "nt": "1 Pet 5", "psalm_proverb": "Prov 27:12-22" },
+            { "ot": "1 Kings 9-10", "nt": "2 Pet 1", "psalm_proverb": "Ps 131" },
+            { "ot": "1 Kings 11", "nt": "2 Pet 2", "psalm_proverb": "Prov 27:23-27" },
+            { "ot": "1 Kings 12", "nt": "2 Pet 3", "psalm_proverb": "Ps 132" }
+          ]
+        },
+        {
+          "week_number": 47,
+          "readings": [
+            { "ot": "1 Kings 13-15", "nt": "1 John 1-2", "psalm_proverb": "Ps 133 / Prov 28:1-18" },
+            { "ot": "1 Kings 16", "nt": "1 John 3", "psalm_proverb": "Ps 134" },
+            { "ot": "1 Kings 17", "nt": "1 John 4", "psalm_proverb": "Prov 28:19-28" },
+            { "ot": "1 Kings 18", "nt": "1 John 5", "psalm_proverb": "Ps 135" }
+          ]
+        },
+        {
+          "week_number": 48,
+          "readings": [
+            { "ot": "1 Kings 19", "nt": "2 John", "psalm_proverb": "Ps 136" },
+            { "ot": "1 Kings 20", "nt": "3 John", "psalm_proverb": "Prov 29:1-14" },
+            { "ot": "1 Kings 21", "nt": "Jude", "psalm_proverb": "Ps 137" },
+            { "ot": "1 Kings 22", "nt": "Rev 1", "psalm_proverb": "Prov 29:15-27" },
+            { "ot": "2 Kings 1-2", "nt": "Rev 2", "psalm_proverb": "Ps 138" }
+          ]
+        },
+        {
+          "week_number": 49,
+          "readings": [
+            { "ot": "2 Kings 3", "nt": "Rev 3", "psalm_proverb": "Ps 139" },
+            { "ot": "2 Kings 4", "nt": "Rev 4", "psalm_proverb": "Prov 30:1-6" },
+            { "ot": "2 Kings 5", "nt": "Rev 5", "psalm_proverb": "Ps 140" },
+            { "ot": "2 Kings 6", "nt": "Rev 6", "psalm_proverb": "Prov 30:7-10" },
+            { "ot": "2 Kings 7", "nt": "Rev 7", "psalm_proverb": "Ps 141" }
+          ]
+        },
+        {
+          "week_number": 50,
+          "readings": [
+            { "ot": "2 Kings 8", "nt": "Rev 8", "psalm_proverb": "Ps 142" },
+            { "ot": "2 Kings 9", "nt": "Rev 9", "psalm_proverb": "Prov 30:11-17" },
+            { "ot": "2 Kings 10", "nt": "Rev 10", "psalm_proverb": "Ps 143" },
+            { "ot": "2 Kings 11-12", "nt": "Rev 11", "psalm_proverb": "Prov 30:18-23" },
+            { "ot": "2 Kings 13-14", "nt": "Rev 12", "psalm_proverb": "Ps 144" }
+          ]
+        },
+        {
+          "week_number": 51,
+          "readings": [
+            { "ot": "2 Kings 15", "nt": "Rev 13", "psalm_proverb": "Ps 145" },
+            { "ot": "2 Kings 16", "nt": "Rev 14", "psalm_proverb": "Prov 30:24-33" },
+            { "ot": "2 Kings 17", "nt": "Rev 15", "psalm_proverb": "Ps 146" },
+            { "ot": "2 Kings 18", "nt": "Rev 16", "psalm_proverb": "Prov 31:1-9" },
+            { "ot": "2 Kings 19", "nt": "Rev 17", "psalm_proverb": "Ps 147" }
+          ]
+        },
+        {
+          "week_number": 52,
+          "readings": [
+            { "ot": "2 Kings 20-21", "nt": "Rev 18", "psalm_proverb": "Ps 148" },
+            { "ot": "2 Kings 22", "nt": "Rev 19", "psalm_proverb": "Prov 31:10-24" },
+            { "ot": "2 Kings 23", "nt": "Rev 20", "psalm_proverb": "Ps 149" },
+            { "ot": "2 Kings 24", "nt": "Rev 21", "psalm_proverb": "Prov 31:25-31" },
+            { "ot": "2 Kings 25", "nt": "Rev 22", "psalm_proverb": "Ps 150" }
+          ]
+        }
+      ]
+    },
+    {
+      "year": 2,
+      "weeks": [
+        {
+          "week_number": 1,
+          "readings": [
+            { "ot": "1 Chron 1-2", "nt": "Matt 1", "psalm_proverb": "Ps 1" },
+            { "ot": "1 Chron 3-5", "nt": "Matt 2", "psalm_proverb": "Ps 2" },
+            { "ot": "1 Chron 6-7", "nt": "Matt 3", "psalm_proverb": "Prov 1:1-7" },
+            { "ot": "1 Chron 8-9", "nt": "Matt 4", "psalm_proverb": "Prov 1:8-19" },
+            { "ot": "1 Chron 10-11", "nt": "Matt 5", "psalm_proverb": "Ps 3" }
+          ]
+        },
+        {
+          "week_number": 2,
+          "readings": [
+            { "ot": "1 Chron 12-13", "nt": "Matt 6", "psalm_proverb": "Ps 4" },
+            { "ot": "1 Chron 14-15", "nt": "Matt 7", "psalm_proverb": "Prov 1:20-33" },
+            { "ot": "1 Chron 16", "nt": "Matt 8", "psalm_proverb": "Ps 5" },
+            { "ot": "1 Chron 17", "nt": "Matt 9", "psalm_proverb": "Ps 6" },
+            { "ot": "1 Chron 18-19", "nt": "Matt 10", "psalm_proverb": "Prov 2:1-8" }
+          ]
+        },
+        {
+          "week_number": 3,
+          "readings": [
+            { "ot": "1 Chron 20-21", "nt": "Matt 11", "psalm_proverb": "Prov 2:9-15" },
+            { "ot": "1 Chron 22", "nt": "Matt 12", "psalm_proverb": "Ps 7" },
+            { "ot": "1 Chron 23-24", "nt": "Matt 13", "psalm_proverb": "Ps 8" },
+            { "ot": "1 Chron 25-26", "nt": "Matt 14", "psalm_proverb": "Prov 2:16-19" },
+            { "ot": "1 Chron 27-28", "nt": "Matt 15", "psalm_proverb": "Prov 2:20-22" }
+          ]
+        },
+        {
+          "week_number": 4,
+          "readings": [
+            { "ot": "1 Chron 29", "nt": "Matt 16", "psalm_proverb": "Ps 9" },
+            { "ot": "2 Chron 1-2", "nt": "Matt 17", "psalm_proverb": "Ps 10" },
+            { "ot": "2 Chron 3-5", "nt": "Matt 18", "psalm_proverb": "Prov 3:1-8" },
+            { "ot": "2 Chron 6", "nt": "Matt 19", "psalm_proverb": "Ps 11" },
+            { "ot": "2 Chron 7-8", "nt": "Matt 20", "psalm_proverb": "Ps 12" }
+          ]
+        },
+        {
+          "week_number": 5,
+          "readings": [
+            { "ot": "2 Chron 9", "nt": "Matt 21", "psalm_proverb": "Prov 3:9-10" },
+            { "ot": "2 Chron 10-11", "nt": "Matt 22", "psalm_proverb": "Ps 13" },
+            { "ot": "2 Chron 12-13", "nt": "Matt 23", "psalm_proverb": "Prov 3:11-18" },
+            { "ot": "2 Chron 14-15", "nt": "Matt 24", "psalm_proverb": "Ps 14" },
+            { "ot": "2 Chron 16-17", "nt": "Matt 25", "psalm_proverb": "Prov 3:19-27" }
+          ]
+        },
+        {
+          "week_number": 6,
+          "readings": [
+            { "ot": "2 Chron 18-19", "nt": "Matt 26", "psalm_proverb": "Ps 15" },
+            { "ot": "2 Chron 20", "nt": "Matt 27", "psalm_proverb": "Prov 3:28-35" },
+            { "ot": "2 Chron 21-22", "nt": "Matt 28", "psalm_proverb": "Ps 16" },
+            { "ot": "2 Chron 23", "nt": "Mark 1", "psalm_proverb": "Prov 4:1-9" },
+            { "ot": "2 Chron 24", "nt": "Mark 2", "psalm_proverb": "Ps 17" }
+          ]
+        },
+        {
+          "week_number": 7,
+          "readings": [
+            { "ot": "2 Chron 25", "nt": "Mark 3", "psalm_proverb": "Ps 18" },
+            { "ot": "2 Chron 26-27", "nt": "Mark 4", "psalm_proverb": "Prov 4:10-19" },
+            { "ot": "2 Chron 28", "nt": "Mark 5", "psalm_proverb": "Ps 19" },
+            { "ot": "2 Chron 29", "nt": "Mark 6", "psalm_proverb": "Prov 4:20-27" },
+            { "ot": "2 Chron 30", "nt": "Mark 7", "psalm_proverb": "Ps 20" }
+          ]
+        },
+        {
+          "week_number": 8,
+          "readings": [
+            { "ot": "2 Chron 31", "nt": "Mark 8", "psalm_proverb": "Ps 21" },
+            { "ot": "2 Chron 32-33", "nt": "Mark 9", "psalm_proverb": "Prov 5:1-6" },
+            { "ot": "2 Chron 34", "nt": "Mark 10", "psalm_proverb": "Ps 22" },
+            { "ot": "2 Chron 35-36", "nt": "Mark 11", "psalm_proverb": "Prov 5:7-14" },
+            { "ot": "Ezra 1-2", "nt": "Mark 12", "psalm_proverb": "Ps 23" }
+          ]
+        },
+        {
+          "week_number": 9,
+          "readings": [
+            { "ot": "Ezra 3-4", "nt": "Mark 13", "psalm_proverb": "Ps 24" },
+            { "ot": "Ezra 5-6", "nt": "Mark 14", "psalm_proverb": "Prov 5:15-23" },
+            { "ot": "Ezra 7", "nt": "Mark 15", "psalm_proverb": "Ps 25" },
+            { "ot": "Ezra 8", "nt": "Mark 16", "psalm_proverb": "Prov 6:1-5" },
+            { "ot": "Ezra 9-10", "nt": "Luke 1", "psalm_proverb": "Ps 26" }
+          ]
+        },
+        {
+          "week_number": 10,
+          "readings": [
+            { "ot": "Neh 1-2", "nt": "Luke 2", "psalm_proverb": "Prov 6:6-11" },
+            { "ot": "Neh 3-4", "nt": "Luke 3", "psalm_proverb": "Ps 27" },
+            { "ot": "Neh 5-6", "nt": "Luke 4", "psalm_proverb": "Prov 6:12-15" },
+            { "ot": "Neh 7", "nt": "Luke 5", "psalm_proverb": "Ps 28" },
+            { "ot": "Neh 8", "nt": "Luke 6", "psalm_proverb": "Prov 6:16-19" }
+          ]
+        },
+        {
+          "week_number": 11,
+          "readings": [
+            { "ot": "Neh 9", "nt": "Luke 7", "psalm_proverb": "Ps 29" },
+            { "ot": "Neh 10-11", "nt": "Luke 8", "psalm_proverb": "Prov 6:20-35" },
+            { "ot": "Neh 12", "nt": "Luke 9", "psalm_proverb": "Ps 30" },
+            { "ot": "Neh 13", "nt": "Luke 10", "psalm_proverb": "Prov 7:1-5" },
+            { "ot": "Est 1-2", "nt": "Luke 11", "psalm_proverb": "Ps 31" }
+          ]
+        },
+        {
+          "week_number": 12,
+          "readings": [
+            { "ot": "Est 3-4", "nt": "Luke 12", "psalm_proverb": "Prov 7:6-20" },
+            { "ot": "Est 5-6", "nt": "Luke 13", "psalm_proverb": "Ps 32" },
+            { "ot": "Est 7-8", "nt": "Luke 14", "psalm_proverb": "Prov 7:21-27" },
+            { "ot": "Est 9-10", "nt": "Luke 15", "psalm_proverb": "Ps 33" },
+            { "ot": "Job 1-2", "nt": "Luke 16", "psalm_proverb": "Ps 34" }
+          ]
+        },
+        {
+          "week_number": 13,
+          "readings": [
+            { "ot": "Job 3-4", "nt": "Luke 17", "psalm_proverb": "Prov 8:1-11" },
+            { "ot": "Job 5-6", "nt": "Luke 18", "psalm_proverb": "Ps 35" },
+            { "ot": "Job 7-8", "nt": "Luke 19", "psalm_proverb": "Prov 8:12-21" },
+            { "ot": "Job 9-10", "nt": "Luke 20", "psalm_proverb": "Prov 8:22-31" },
+            { "ot": "Job 11-12", "nt": "Luke 21", "psalm_proverb": "Prov 8:32-36" }
+          ]
+        },
+        {
+          "week_number": 14,
+          "readings": [
+            { "ot": "Job 13-14", "nt": "Luke 22", "psalm_proverb": "Ps 36" },
+            { "ot": "Job 15", "nt": "Luke 23", "psalm_proverb": "Ps 37" },
+            { "ot": "Job 16-17", "nt": "Luke 24", "psalm_proverb": "Ps 38" },
+            { "ot": "Job 18-19", "nt": "John 1", "psalm_proverb": "Ps 39" },
+            { "ot": "Job 20-21", "nt": "John 2", "psalm_proverb": "Ps 40" }
+          ]
+        },
+        {
+          "week_number": 15,
+          "readings": [
+            { "ot": "Job 22-23", "nt": "John 3", "psalm_proverb": "Ps 41" },
+            { "ot": "Job 24-26", "nt": "John 4", "psalm_proverb": "Prov 9:1-6" },
+            { "ot": "Job 27-28", "nt": "John 5", "psalm_proverb": "Prov 9:7-9" },
+            { "ot": "Job 29-30", "nt": "John 6", "psalm_proverb": "Prov 9:10-12" },
+            { "ot": "Job 31-32", "nt": "John 7", "psalm_proverb": "Prov 9:13-18" }
+          ]
+        },
+        {
+          "week_number": 16,
+          "readings": [
+            { "ot": "Job 33-34", "nt": "John 8", "psalm_proverb": "Prov 10:1-11" },
+            { "ot": "Job 35-36", "nt": "John 9", "psalm_proverb": "Ps 42" },
+            { "ot": "Job 37-38", "nt": "John 10", "psalm_proverb": "Prov 10:12-21" },
+            { "ot": "Job 39-40", "nt": "John 11", "psalm_proverb": "Ps 43" },
+            { "ot": "Job 41-42", "nt": "John 12", "psalm_proverb": "Prov 10:22-25" }
+          ]
+        },
+        {
+          "week_number": 17,
+          "readings": [
+            { "ot": "Eccles 1-2", "nt": "John 13", "psalm_proverb": "Ps 44" },
+            { "ot": "Eccles 3-4", "nt": "John 14", "psalm_proverb": "Prov 10:26-32" },
+            { "ot": "Eccles 5-6", "nt": "John 15", "psalm_proverb": "Ps 45" },
+            { "ot": "Eccles 7-8", "nt": "John 16", "psalm_proverb": "Prov 11:1-7" },
+            { "ot": "Eccles 9-10", "nt": "John 17", "psalm_proverb": "Ps 46" }
+          ]
+        },
+        {
+          "week_number": 18,
+          "readings": [
+            { "ot": "Eccles 11-12", "nt": "John 18", "psalm_proverb": "Ps 47" },
+            { "ot": "Song 1-2", "nt": "John 19", "psalm_proverb": "Prov 11:8-14" },
+            { "ot": "Song 3-4", "nt": "John 20", "psalm_proverb": "Ps 48" },
+            { "ot": "Song 5-6", "nt": "John 21", "psalm_proverb": "Prov 11:15-20" },
+            { "ot": "Song 7-8", "nt": "Acts 1", "psalm_proverb": "Ps 49" }
+          ]
+        },
+        {
+          "week_number": 19,
+          "readings": [
+            { "ot": "Isa 1", "nt": "Acts 2", "psalm_proverb": "Ps 50" },
+            { "ot": "Isa 2", "nt": "Acts 3", "psalm_proverb": "Prov 11:21-31" },
+            { "ot": "Isa 3-4", "nt": "Acts 4", "psalm_proverb": "Ps 51" },
+            { "ot": "Isa 5-6", "nt": "Acts 5", "psalm_proverb": "Prov 12:1-8" },
+            { "ot": "Isa 7-8", "nt": "Acts 6", "psalm_proverb": "Prov 12:9-14" }
+          ]
+        },
+        {
+          "week_number": 20,
+          "readings": [
+            { "ot": "Isa 9", "nt": "Acts 7", "psalm_proverb": "Prov 12:15-28" },
+            { "ot": "Isa 10-11", "nt": "Acts 8", "psalm_proverb": "Ps 52" },
+            { "ot": "Isa 12-13", "nt": "Acts 9", "psalm_proverb": "Ps 53" },
+            { "ot": "Isa 14", "nt": "Acts 10", "psalm_proverb": "Prov 13:1-11" },
+            { "ot": "Isa 15-16", "nt": "Acts 11", "psalm_proverb": "Ps 54" }
+          ]
+        },
+        {
+          "week_number": 21,
+          "readings": [
+            { "ot": "Isa 17-18", "nt": "Acts 12", "psalm_proverb": "Ps 55" },
+            { "ot": "Isa 19", "nt": "Acts 13", "psalm_proverb": "Prov 13:12-18" },
+            { "ot": "Isa 20-21", "nt": "Acts 14", "psalm_proverb": "Ps 56" },
+            { "ot": "Isa 22-23", "nt": "Acts 15", "psalm_proverb": "Prov 13:19-25" },
+            { "ot": "Isa 24-25", "nt": "Acts 16", "psalm_proverb": "Ps 57" }
+          ]
+        },
+        {
+          "week_number": 22,
+          "readings": [
+            { "ot": "Isa 26-27", "nt": "Acts 17", "psalm_proverb": "Ps 58" },
+            { "ot": "Isa 28", "nt": "Acts 18", "psalm_proverb": "Prov 14:1-10" },
+            { "ot": "Isa 29", "nt": "Acts 19", "psalm_proverb": "Ps 59" },
+            { "ot": "Isa 30", "nt": "Acts 20", "psalm_proverb": "Prov 14:11-14" },
+            { "ot": "Isa 31-32", "nt": "Acts 21", "psalm_proverb": "Ps 60" }
+          ]
+        },
+        {
+          "week_number": 23,
+          "readings": [
+            { "ot": "Isa 33", "nt": "Acts 22", "psalm_proverb": "Ps 61" },
+            { "ot": "Isa 34-35", "nt": "Acts 23", "psalm_proverb": "Prov 14:15-25" },
+            { "ot": "Isa 36", "nt": "Acts 24", "psalm_proverb": "Ps 62" },
+            { "ot": "Isa 37", "nt": "Acts 25", "psalm_proverb": "Prov 14:26-35" },
+            { "ot": "Isa 38-39", "nt": "Acts 26", "psalm_proverb": "Ps 63" }
+          ]
+        },
+        {
+          "week_number": 24,
+          "readings": [
+            { "ot": "Isa 40", "nt": "Acts 27", "psalm_proverb": "Ps 64" },
+            { "ot": "Isa 41", "nt": "Acts 28", "psalm_proverb": "Prov 15:1-8" },
+            { "ot": "Isa 42-43", "nt": "Rom 1", "psalm_proverb": "Ps 65" },
+            { "ot": "Isa 44", "nt": "Rom 2", "psalm_proverb": "Prov 15:9-18" },
+            { "ot": "Isa 45-46", "nt": "Rom 3", "psalm_proverb": "Ps 66" }
+          ]
+        },
+        {
+          "week_number": 25,
+          "readings": [
+            { "ot": "Isa 47-48", "nt": "Rom 4", "psalm_proverb": "Ps 67" },
+            { "ot": "Isa 49-50", "nt": "Rom 5", "psalm_proverb": "Prov 15:19-26" },
+            { "ot": "Isa 51", "nt": "Rom 6", "psalm_proverb": "Ps 68" },
+            { "ot": "Isa 52-53", "nt": "Rom 7", "psalm_proverb": "Prov 15:27-33" },
+            { "ot": "Isa 54-55", "nt": "Rom 8", "psalm_proverb": "Ps 69" }
+          ]
+        },
+        {
+          "week_number": 26,
+          "readings": [
+            { "ot": "Isa 56-57", "nt": "Rom 9", "psalm_proverb": "Ps 70" },
+            { "ot": "Isa 58", "nt": "Rom 10", "psalm_proverb": "Prov 16:1-5" },
+            { "ot": "Isa 59", "nt": "Rom 11", "psalm_proverb": "Ps 71" },
+            { "ot": "Isa 60", "nt": "Rom 12", "psalm_proverb": "Prov 16:6-15" },
+            { "ot": "Isa 61-62", "nt": "Rom 13", "psalm_proverb": "Ps 72" }
+          ]
+        },
+        {
+          "week_number": 27,
+          "readings": [
+            { "ot": "Isa 63-64", "nt": "Rom 14", "psalm_proverb": "Ps 73" },
+            { "ot": "Isa 65", "nt": "Rom 15", "psalm_proverb": "Prov 16:16-24" },
+            { "ot": "Isa 66", "nt": "Rom 16", "psalm_proverb": "Ps 74" },
+            { "ot": "Jer 1", "nt": "1 Cor 1", "psalm_proverb": "Prov 16:25-33" },
+            { "ot": "Jer 2", "nt": "1 Cor 2", "psalm_proverb": "Ps 75" }
+          ]
+        },
+        {
+          "week_number": 28,
+          "readings": [
+            { "ot": "Jer 3", "nt": "1 Cor 3", "psalm_proverb": "Ps 76" },
+            { "ot": "Jer 4", "nt": "1 Cor 4", "psalm_proverb": "Ps 77" },
+            { "ot": "Jer 5", "nt": "1 Cor 5", "psalm_proverb": "Prov 17:1-12" },
+            { "ot": "Jer 6", "nt": "1 Cor 6", "psalm_proverb": "Ps 78" },
+            { "ot": "Jer 7", "nt": "1 Cor 7", "psalm_proverb": "Ps 79" }
+          ]
+        },
+        {
+          "week_number": 29,
+          "readings": [
+            { "ot": "Jer 8", "nt": "1 Cor 8", "psalm_proverb": "Ps 80" },
+            { "ot": "Jer 9", "nt": "1 Cor 9", "psalm_proverb": "Prov 17:13-20" },
+            { "ot": "Jer 10", "nt": "1 Cor 10", "psalm_proverb": "Ps 81" },
+            { "ot": "Jer 11-12", "nt": "1 Cor 11", "psalm_proverb": "Prov 17:21-28" },
+            { "ot": "Jer 13", "nt": "1 Cor 12", "psalm_proverb": "Ps 82" }
+          ]
+        },
+        {
+          "week_number": 30,
+          "readings": [
+            { "ot": "Jer 14", "nt": "1 Cor 13", "psalm_proverb": "Ps 83" },
+            { "ot": "Jer 15", "nt": "1 Cor 14", "psalm_proverb": "Prov 18:1-8" },
+            { "ot": "Jer 16", "nt": "1 Cor 15", "psalm_proverb": "Ps 84" },
+            { "ot": "Jer 17", "nt": "1 Cor 16", "psalm_proverb": "Prov 18:9-13" },
+            { "ot": "Jer 18-19", "nt": "2 Cor 1", "psalm_proverb": "Ps 85" }
+          ]
+        },
+        {
+          "week_number": 31,
+          "readings": [
+            { "ot": "Jer 20-21", "nt": "2 Cor 2", "psalm_proverb": "Ps 86" },
+            { "ot": "Jer 22", "nt": "2 Cor 3", "psalm_proverb": "Prov 18:14-15" },
+            { "ot": "Jer 23", "nt": "2 Cor 4", "psalm_proverb": "Ps 87" },
+            { "ot": "Jer 24-25", "nt": "2 Cor 5", "psalm_proverb": "Prov 18:16-24" },
+            { "ot": "Jer 26", "nt": "2 Cor 6", "psalm_proverb": "Ps 88" }
+          ]
+        },
+        {
+          "week_number": 32,
+          "readings": [
+            { "ot": "Jer 27-28", "nt": "2 Cor 7", "psalm_proverb": "Ps 89" },
+            { "ot": "Jer 29-30", "nt": "2 Cor 8-9", "psalm_proverb": "Prov 19:1-10 / Ps 90" },
+            { "ot": "Jer 31", "nt": "2 Cor 10", "psalm_proverb": "Prov 19:11-17" },
+            { "ot": "Jer 32", "nt": "2 Cor 11", "psalm_proverb": "Ps 91" }
+          ]
+        },
+        {
+          "week_number": 33,
+          "readings": [
+            { "ot": "Jer 33", "nt": "2 Cor 12", "psalm_proverb": "Ps 92" },
+            { "ot": "Jer 34-35", "nt": "2 Cor 13", "psalm_proverb": "Prov 19:18-23" },
+            { "ot": "Jer 36", "nt": "Gal 1", "psalm_proverb": "Ps 93" },
+            { "ot": "Jer 37", "nt": "Gal 2", "psalm_proverb": "Prov 19:24-29" },
+            { "ot": "Jer 38-39", "nt": "Gal 3", "psalm_proverb": "Ps 94" }
+          ]
+        },
+        {
+          "week_number": 34,
+          "readings": [
+            { "ot": "Jer 40-41", "nt": "Gal 4", "psalm_proverb": "Ps 95" },
+            { "ot": "Jer 42-43", "nt": "Gal 5", "psalm_proverb": "Prov 20:1-4" },
+            { "ot": "Jer 44-45", "nt": "Gal 6", "psalm_proverb": "Ps 96" },
+            { "ot": "Jer 46-47", "nt": "Eph 1", "psalm_proverb": "Prov 20:5-12" },
+            { "ot": "Jer 48", "nt": "Eph 2", "psalm_proverb": "Ps 97" }
+          ]
+        },
+        {
+          "week_number": 35,
+          "readings": [
+            { "ot": "Jer 49", "nt": "Eph 3", "psalm_proverb": "Ps 98" },
+            { "ot": "Jer 50", "nt": "Eph 4", "psalm_proverb": "Prov 20:13-23" },
+            { "ot": "Jer 51", "nt": "Eph 5", "psalm_proverb": "Ps 99" },
+            { "ot": "Jer 52", "nt": "Eph 6", "psalm_proverb": "Prov 20:24-30" },
+            { "ot": "Lam 1", "nt": "Phil 1", "psalm_proverb": "Ps 100" }
+          ]
+        },
+        {
+          "week_number": 36,
+          "readings": [
+            { "ot": "Lam 2", "nt": "Phil 2", "psalm_proverb": "Ps 101" },
+            { "ot": "Lam 3", "nt": "Phil 3", "psalm_proverb": "Prov 21:1-10" },
+            { "ot": "Lam 4", "nt": "Phil 4", "psalm_proverb": "Ps 102" },
+            { "ot": "Lam 5", "nt": "Col 1", "psalm_proverb": "Prov 21:11-22" },
+            { "ot": "Ezek 1-2", "nt": "Col 2", "psalm_proverb": "Ps 103" }
+          ]
+        },
+        {
+          "week_number": 37,
+          "readings": [
+            { "ot": "Ezek 3-4", "nt": "Col 3", "psalm_proverb": "Ps 104" },
+            { "ot": "Ezek 5-6", "nt": "Col 4", "psalm_proverb": "Prov 21:23-31" },
+            { "ot": "Ezek 7-8", "nt": "1 Thess 1", "psalm_proverb": "Ps 105" },
+            { "ot": "Ezek 9-10", "nt": "1 Thess 2", "psalm_proverb": "Prov 22:1-9" },
+            { "ot": "Ezek 11-12", "nt": "1 Thess 3", "psalm_proverb": "Ps 106" }
+          ]
+        },
+        {
+          "week_number": 38,
+          "readings": [
+            { "ot": "Ezek 13", "nt": "1 Thess 4", "psalm_proverb": "Ps 107" },
+            { "ot": "Ezek 14-15", "nt": "1 Thess 5", "psalm_proverb": "Prov 22:10-16" },
+            { "ot": "Ezek 16", "nt": "2 Thess 1", "psalm_proverb": "Ps 108" },
+            { "ot": "Ezek 17", "nt": "2 Thess 2", "psalm_proverb": "Prov 22:17-21" },
+            { "ot": "Ezek 18-19", "nt": "2 Thess 3", "psalm_proverb": "Ps 109" }
+          ]
+        },
+        {
+          "week_number": 39,
+          "readings": [
+            { "ot": "Ezek 20", "nt": "1 Tim 1", "psalm_proverb": "Ps 110" },
+            { "ot": "Ezek 21-22", "nt": "1 Tim 2", "psalm_proverb": "Prov 22:22-29" },
+            { "ot": "Ezek 23", "nt": "1 Tim 3", "psalm_proverb": "Ps 111" },
+            { "ot": "Ezek 24", "nt": "1 Tim 4", "psalm_proverb": "Prov 23:1-8" },
+            { "ot": "Ezek 25-26", "nt": "1 Tim 5", "psalm_proverb": "Ps 112" }
+          ]
+        },
+        {
+          "week_number": 40,
+          "readings": [
+            { "ot": "Ezek 27", "nt": "1 Tim 6", "psalm_proverb": "Ps 113" },
+            { "ot": "Ezek 28-29", "nt": "2 Tim 1", "psalm_proverb": "Prov 23:9-28" },
+            { "ot": "Ezek 30-31", "nt": "2 Tim 2", "psalm_proverb": "Ps 114" },
+            { "ot": "Ezek 32", "nt": "2 Tim 3", "psalm_proverb": "Prov 23:29-35" },
+            { "ot": "Ezek 33", "nt": "2 Tim 4", "psalm_proverb": "Ps 115" }
+          ]
+        },
+        {
+          "week_number": 41,
+          "readings": [
+            { "ot": "Ezek 34-35", "nt": "Tit 1", "psalm_proverb": "Ps 116" },
+            { "ot": "Ezek 36", "nt": "Tit 2", "psalm_proverb": "Prov 24:1-9" },
+            { "ot": "Ezek 37", "nt": "Tit 3", "psalm_proverb": "Ps 117" },
+            { "ot": "Ezek 38-39", "nt": "Philemon", "psalm_proverb": "Prov 24:10-16" },
+            { "ot": "Ezek 40", "nt": "Heb 1", "psalm_proverb": "Ps 118" }
+          ]
+        },
+        {
+          "week_number": 42,
+          "readings": [
+            { "ot": null, "nt": "Heb 2", "psalm_proverb": "Ps 119" },
+            { "ot": "Ezek 41-42", "nt": "Heb 3", "psalm_proverb": "Prov 24:17-22" },
+            { "ot": "Ezek 43-44", "nt": "Heb 4", "psalm_proverb": "Prov 24:23-29" },
+            { "ot": "Ezek 45-46", "nt": "Heb 5", "psalm_proverb": "Prov 24:30-34" },
+            { "ot": "Ezek 47-48", "nt": "Heb 6", "psalm_proverb": "Ps 120" }
+          ]
+        },
+        {
+          "week_number": 43,
+          "readings": [
+            { "ot": "Dan 1", "nt": "Heb 7", "psalm_proverb": "Ps 121" },
+            { "ot": "Dan 2", "nt": "Heb 8", "psalm_proverb": "Prov 25:1-10" },
+            { "ot": "Dan 3", "nt": "Heb 9", "psalm_proverb": "Ps 122" },
+            { "ot": "Dan 4", "nt": "Heb 10", "psalm_proverb": "Prov 25:11-28" },
+            { "ot": "Dan 5", "nt": "Heb 11", "psalm_proverb": "Ps 123" }
+          ]
+        },
+        {
+          "week_number": 44,
+          "readings": [
+            { "ot": "Dan 6", "nt": "Heb 12", "psalm_proverb": "Ps 124" },
+            { "ot": "Dan 7", "nt": "Heb 13", "psalm_proverb": "Prov 26:1-12" },
+            { "ot": "Dan 8", "nt": "James 1", "psalm_proverb": "Ps 125" },
+            { "ot": "Dan 9-10", "nt": "James 2", "psalm_proverb": "Prov 26:13-20" },
+            { "ot": "Dan 11-12", "nt": "James 3", "psalm_proverb": "Ps 126" }
+          ]
+        },
+        {
+          "week_number": 45,
+          "readings": [
+            { "ot": "Hos 1-3", "nt": "James 4", "psalm_proverb": "Ps 127" },
+            { "ot": "Hos 4-5", "nt": "James 5", "psalm_proverb": "Prov 26:21-28" },
+            { "ot": "Hos 6-7", "nt": "1 Pet 1", "psalm_proverb": "Ps 128" },
+            { "ot": "Hos 8-9", "nt": "1 Pet 2", "psalm_proverb": "Prov 27:1-11" },
+            { "ot": "Hos 10-11", "nt": "1 Pet 3", "psalm_proverb": "Ps 129" }
+          ]
+        },
+        {
+          "week_number": 46,
+          "readings": [
+            { "ot": "Hos 12-14", "nt": "1 Pet 4", "psalm_proverb": "Ps 130" },
+            { "ot": "Joel 1", "nt": "1 Pet 5", "psalm_proverb": "Prov 27:12-22" },
+            { "ot": "Joel 2-3", "nt": "2 Pet 1", "psalm_proverb": "Ps 131" },
+            { "ot": "Amos 1-2", "nt": "2 Pet 2", "psalm_proverb": "Prov 27:23-27" },
+            { "ot": "Amos 3-4", "nt": "2 Pet 3", "psalm_proverb": "Ps 132" }
+          ]
+        },
+        {
+          "week_number": 47,
+          "readings": [
+            { "ot": "Amos 5", "nt": "1 John 1", "psalm_proverb": "Ps 133" },
+            { "ot": "Amos 6-7", "nt": "1 John 2", "psalm_proverb": "Prov 28:1-18" },
+            { "ot": "Amos 8-9", "nt": "1 John 3", "psalm_proverb": "Ps 134" },
+            { "ot": "Obadiah", "nt": "1 John 4", "psalm_proverb": "Prov 28:19-28" },
+            { "ot": "Jonah 1-2", "nt": "1 John 5", "psalm_proverb": "Ps 135" }
+          ]
+        },
+        {
+          "week_number": 48,
+          "readings": [
+            { "ot": "Jonah 3-4", "nt": "2 John", "psalm_proverb": "Ps 136" },
+            { "ot": "Mic 1-2", "nt": "3 John", "psalm_proverb": "Prov 29:1-14" },
+            { "ot": "Mic 3-4", "nt": "Jude", "psalm_proverb": "Ps 137" },
+            { "ot": "Mic 5-6", "nt": "Rev 1", "psalm_proverb": "Prov 29:15-27" },
+            { "ot": "Mic 7", "nt": "Rev 2", "psalm_proverb": "Ps 138" }
+          ]
+        },
+        {
+          "week_number": 49,
+          "readings": [
+            { "ot": "Nah 1-2", "nt": "Rev 3", "psalm_proverb": "Ps 139" },
+            { "ot": "Nah 3", "nt": "Rev 4", "psalm_proverb": "Prov 30:1-6" },
+            { "ot": "Hab 1", "nt": "Rev 5", "psalm_proverb": "Ps 140" },
+            { "ot": "Hab 2", "nt": "Rev 6", "psalm_proverb": "Prov 30:7-10" },
+            { "ot": "Hab 3", "nt": "Rev 7", "psalm_proverb": "Ps 141" }
+          ]
+        },
+        {
+          "week_number": 50,
+          "readings": [
+            { "ot": "Zeph 1", "nt": "Rev 8", "psalm_proverb": "Ps 142" },
+            { "ot": "Zeph 2", "nt": "Rev 9", "psalm_proverb": "Prov 30:11-17" },
+            { "ot": "Zeph 3", "nt": "Rev 10", "psalm_proverb": "Ps 143" },
+            { "ot": "Hag 1-2", "nt": "Rev 11", "psalm_proverb": "Prov 30:18-23" },
+            { "ot": "Zech 1-2", "nt": "Rev 12", "psalm_proverb": "Ps 144" }
+          ]
+        },
+        {
+          "week_number": 51,
+          "readings": [
+            { "ot": "Zech 3-4", "nt": "Rev 13", "psalm_proverb": "Ps 145" },
+            { "ot": "Zech 5-6", "nt": "Rev 14", "psalm_proverb": "Prov 30:24-33" },
+            { "ot": "Zech 7", "nt": "Rev 15", "psalm_proverb": "Ps 146" },
+            { "ot": "Zech 8", "nt": "Rev 16", "psalm_proverb": "Prov 31:1-9" },
+            { "ot": "Zech 9", "nt": "Rev 17", "psalm_proverb": "Ps 147" }
+          ]
+        },
+        {
+          "week_number": 52,
+          "readings": [
+            { "ot": "Zech 10", "nt": "Rev 18", "psalm_proverb": "Ps 148" },
+            { "ot": "Zech 11-12", "nt": "Rev 19", "psalm_proverb": "Prov 31:10-24" },
+            { "ot": "Zech 13-14", "nt": "Rev 20", "psalm_proverb": "Ps 149" },
+            { "ot": "Mal 1-2", "nt": "Rev 21", "psalm_proverb": "Prov 31:25-31" },
+            { "ot": "Mal 3-4", "nt": "Rev 22", "psalm_proverb": "Ps 150" }
+          ]
+        }
+      ]
+    }
+  ]
+}
