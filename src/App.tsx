@@ -140,6 +140,16 @@ export function App() {
             </li>
           ))}
         </ul>
+        {items.length > 1 && (
+          <a
+            className="mt-4 inline-block text-sm text-sky-700 underline decoration-sky-300 underline-offset-4 hover:text-sky-900 hover:decoration-sky-700"
+            href={biblegatewayUrl(items.join("; "))}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Read all
+          </a>
+        )}
       </div>
     </div>
   );
