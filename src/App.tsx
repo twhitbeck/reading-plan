@@ -10,10 +10,12 @@ const PILL_LABELS = ["Mon", "Tue", "Wed", "Thu", "Fri"];
 const DAY_TO_READING_INDEX = [0, 0, 1, 2, 3, 4, 4];
 
 function getCurrentWeekOfYear(date: Date): number {
-  const start = new Date(date.getFullYear(), 0, 1);
-  const diffMs = date.getTime() - start.getTime();
-  const dayOfYear = Math.floor(diffMs / (1000 * 60 * 60 * 24));
-  return Math.floor(dayOfYear / 7) + 1;
+  // ISO 8601 week number: weeks start Monday, week 1 contains the first Thursday.
+  const d = new Date(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()));
+  const dayNum = d.getUTCDay() || 7;
+  d.setUTCDate(d.getUTCDate() + 4 - dayNum);
+  const yearStart = new Date(Date.UTC(d.getUTCFullYear(), 0, 1));
+  return Math.ceil(((d.getTime() - yearStart.getTime()) / 86400000 + 1) / 7);
 }
 
 function biblegatewayUrl(reading: string): string {
