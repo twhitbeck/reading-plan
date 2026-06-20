@@ -236,7 +236,7 @@ export function App() {
       {/* Carousel — each panel carries its own card styling so the whole card swipes */}
       <div
         ref={carouselRef}
-        className="flex snap-x snap-mandatory overflow-x-auto overscroll-x-contain scrollbar-none"
+        className="flex gap-4 snap-x snap-mandatory overflow-x-auto overscroll-x-contain scrollbar-none"
       >
         {READING_DAY_LABELS.map((label, i) => {
           const reading = weekData.readings[i];
@@ -249,7 +249,7 @@ export function App() {
               ref={(el) => {
                 dayRefs.current[i] = el;
               }}
-              className="w-full shrink-0 snap-start"
+              className="w-full shrink-0 snap-start snap-always"
             >
               <div className="rounded-lg border border-slate-200 bg-slate-50 p-6 shadow-sm dark:border-slate-700 dark:bg-slate-800">
                 <h2 className="mb-4 text-sm font-medium uppercase tracking-wider text-slate-500 dark:text-slate-400">
