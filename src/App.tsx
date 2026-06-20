@@ -41,36 +41,57 @@ export function App() {
   const defaultWeek = Math.min(Math.max(getCurrentWeekOfYear(today) - 1, 1), maxWeek);
   const [week, setWeek] = useState<number>(defaultWeek);
   const [dayIndex, setDayIndex] = useState<number>(initialReadingIndex);
-  const swipeDir = useRef<"left" | "right" | null>(null);
-  const touchStartX = useRef<number | null>(null);
 
-  function goToDay(next: number) {
-    swipeDir.current = next > dayIndex ? "left" : "right";
-    setDayIndex(next);
-  }
+  const carouselRef = useRef<HTMLDivElement>(null);
+  const dayRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const isFirstRender = useRef(true);
 
-  function handleTouchStart(e: React.TouchEvent) {
-    touchStartX.current = e.touches[0].clientX;
-  }
+  // Scroll to active day when dayIndex changes (pill button click)
+  useEffect(() => {
+    const el = dayRefs.current[dayIndex];
+    if (!el) return;
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    el.scrollIntoView({
+      behavior: isFirstRender.current || prefersReducedMotion ? "instant" : "smooth",
+      block: "nearest",
+      inline: "start",
+    });
+    isFirstRender.current = false;
+  }, [dayIndex]);
 
-  function handleTouchEnd(e: React.TouchEvent) {
-    if (touchStartX.current === null) return;
-    const delta = e.changedTouches[0].clientX - touchStartX.current;
-    touchStartX.current = null;
-    if (Math.abs(delta) < 40) return;
-    if (delta < 0 && dayIndex < PILL_LABELS.length - 1) goToDay(dayIndex + 1);
-    else if (delta > 0 && dayIndex > 0) goToDay(dayIndex - 1);
-  }
+  // Sync active pill when user swipes
+  useEffect(() => {
+    const container = carouselRef.current;
+    if (!container) return;
+
+    const syncIndex = () => {
+      const index = Math.round(container.scrollLeft / container.clientWidth);
+      setDayIndex(index);
+    };
+
+    // scrollend is not yet in older Safari; fall back to a debounced scroll event
+    if ("onscrollend" in window) {
+      container.addEventListener("scrollend", syncIndex);
+      return () => container.removeEventListener("scrollend", syncIndex);
+    } else {
+      let timer: ReturnType<typeof setTimeout>;
+      const onScroll = () => {
+        clearTimeout(timer);
+        timer = setTimeout(syncIndex, 150);
+      };
+      container.addEventListener("scroll", onScroll);
+      return () => {
+        container.removeEventListener("scroll", onScroll);
+        clearTimeout(timer);
+      };
+    }
+  }, []);
 
   useEffect(() => {
     localStorage.setItem(YEAR_STORAGE_KEY, String(year));
   }, [year]);
 
   const weekData = yearData.weeks.find((w) => w.week_number === week) ?? yearData.weeks[0];
-  const reading = weekData.readings[dayIndex];
-  const items = [reading.ot, reading.nt, reading.psalm_proverb].filter(
-    (item): item is string => item != null,
-  );
 
   const selectClass =
     "ml-2 rounded-md border border-slate-300 bg-white px-2 py-1 text-sm shadow-sm focus:border-slate-500 focus:outline-none focus:ring-1 focus:ring-slate-500 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-100 dark:focus:border-slate-400 dark:focus:ring-slate-400";
@@ -119,7 +140,7 @@ export function App() {
             <button
               key={label}
               type="button"
-              onClick={() => goToDay(i)}
+              onClick={() => setDayIndex(i)}
               className={
                 "relative flex-1 rounded-full px-2 py-1.5 text-sm font-medium transition " +
                 (isSelected
@@ -143,42 +164,52 @@ export function App() {
       </div>
 
       <div
-        onTouchStart={handleTouchStart}
-        onTouchEnd={handleTouchEnd}
-        className="overflow-hidden rounded-lg border border-slate-200 bg-slate-50 shadow-sm dark:border-slate-700 dark:bg-slate-800"
+        ref={carouselRef}
+        className="carousel flex snap-x snap-mandatory overflow-x-auto rounded-lg border border-slate-200 bg-slate-50 shadow-sm dark:border-slate-700 dark:bg-slate-800"
       >
-      <div
-        key={dayIndex}
-        className={"p-6 " + (swipeDir.current === "left" ? "slide-from-right" : swipeDir.current === "right" ? "slide-from-left" : "")}
-      >
-        <h2 className="mb-4 text-sm font-medium uppercase tracking-wider text-slate-500 dark:text-slate-400">
-          {READING_DAY_LABELS[dayIndex]}
-        </h2>
-        <ul className="space-y-2 text-lg">
-          {items.map((item) => (
-            <li key={item}>
-              <a
-                className="text-sky-700 underline decoration-sky-300 underline-offset-4 hover:text-sky-900 hover:decoration-sky-700 dark:text-sky-400 dark:decoration-sky-600 dark:hover:text-sky-200 dark:hover:decoration-sky-400"
-                href={biblegatewayUrl(item)}
-                target="_blank"
-                rel="noreferrer"
-              >
-                {item}
-              </a>
-            </li>
-          ))}
-        </ul>
-        {items.length > 1 && (
-          <a
-            className="mt-4 inline-block text-sm text-sky-700 underline decoration-sky-300 underline-offset-4 hover:text-sky-900 hover:decoration-sky-700 dark:text-sky-400 dark:decoration-sky-600 dark:hover:text-sky-200 dark:hover:decoration-sky-400"
-            href={biblegatewayUrl(items.join("; "))}
-            target="_blank"
-            rel="noreferrer"
-          >
-            Read all
-          </a>
-        )}
-      </div>
+        {READING_DAY_LABELS.map((label, i) => {
+          const reading = weekData.readings[i];
+          const items = [reading.ot, reading.nt, reading.psalm_proverb].filter(
+            (item): item is string => item != null,
+          );
+          return (
+            <div
+              key={label}
+              ref={(el) => {
+                dayRefs.current[i] = el;
+              }}
+              className="w-full shrink-0 snap-start p-6"
+            >
+              <h2 className="mb-4 text-sm font-medium uppercase tracking-wider text-slate-500 dark:text-slate-400">
+                {label}
+              </h2>
+              <ul className="space-y-2 text-lg">
+                {items.map((item) => (
+                  <li key={item}>
+                    <a
+                      className="text-sky-700 underline decoration-sky-300 underline-offset-4 hover:text-sky-900 hover:decoration-sky-700 dark:text-sky-400 dark:decoration-sky-600 dark:hover:text-sky-200 dark:hover:decoration-sky-400"
+                      href={biblegatewayUrl(item)}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      {item}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+              {items.length > 1 && (
+                <a
+                  className="mt-4 inline-block text-sm text-sky-700 underline decoration-sky-300 underline-offset-4 hover:text-sky-900 hover:decoration-sky-700 dark:text-sky-400 dark:decoration-sky-600 dark:hover:text-sky-200 dark:hover:decoration-sky-400"
+                  href={biblegatewayUrl(items.join("; "))}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Read all
+                </a>
+              )}
+            </div>
+          );
+        })}
       </div>
     </div>
   );

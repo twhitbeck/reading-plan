@@ -6,20 +6,12 @@
   }
 }
 
-@keyframes slideInFromRight {
-  from { transform: translateX(60px); opacity: 0; }
-  to { transform: translateX(0); opacity: 1; }
+/* Hide scrollbar and prevent browser back/forward swipe on the carousel */
+.carousel {
+  scrollbar-width: none;
+  overscroll-behavior-x: contain;
 }
 
-@keyframes slideInFromLeft {
-  from { transform: translateX(-60px); opacity: 0; }
-  to { transform: translateX(0); opacity: 1; }
-}
-
-.slide-from-right {
-  animation: slideInFromRight 0.2s ease-out;
-}
-
-.slide-from-left {
-  animation: slideInFromLeft 0.2s ease-out;
+.carousel::-webkit-scrollbar {
+  display: none;
 }
