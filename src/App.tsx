@@ -1,4 +1,7 @@
 import { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
+
+// scrollsnapchanging / scrollsnapchange are new enough that TS lib may not have them yet
+type SnapEvent = Event & { readonly snapTargetInline: Element | null };
 import plan from "./plan.json";
 
 const YEAR_STORAGE_KEY = "reading-plan-year";
@@ -104,33 +107,69 @@ export function App() {
     isFirstRender.current = false;
   }, [dayIndex]);
 
-  // Drive indicator in real-time during swipe; sync dayIndex at scroll end
+  // Drive indicator in real-time via scroll + rAF (works in all browsers)
+  useEffect(() => {
+    const container = carouselRef.current;
+    if (!container) return;
+    let rafId: number | null = null;
+    const onScroll = () => {
+      if (rafId !== null) return;
+      rafId = requestAnimationFrame(() => {
+        rafId = null;
+        if (carouselRef.current) {
+          updateIndicator(carouselRef.current.scrollLeft / carouselRef.current.clientWidth);
+        }
+      });
+    };
+    container.addEventListener("scroll", onScroll, { passive: true });
+    return () => {
+      container.removeEventListener("scroll", onScroll);
+      if (rafId !== null) cancelAnimationFrame(rafId);
+    };
+  }, [updateIndicator]);
+
+  // Sync dayIndex: scrollsnapchanging/scrollsnapchange → scrollend → debounced scroll
   useEffect(() => {
     const container = carouselRef.current;
     if (!container) return;
 
-    const syncDayIndex = () => {
+    const syncFromElement = (target: Element | null) => {
+      if (!target) return;
+      const index = dayRefs.current.indexOf(target as HTMLDivElement);
+      if (index !== -1) setDayIndex(index);
+    };
+    const syncFromScrollLeft = () =>
       setDayIndex(Math.round(container.scrollLeft / container.clientWidth));
-    };
 
-    const onScroll = () => {
-      updateIndicator(container.scrollLeft / container.clientWidth);
-      if (!("onscrollend" in window)) {
-        clearTimeout(timer);
-        timer = setTimeout(syncDayIndex, 150);
-      }
-    };
+    if ("onscrollsnapchange" in container) {
+      // scrollsnapchanging: eagerly update as pending snap target changes during drag
+      // scrollsnapchange: confirm final target when snap settles
+      const onChanging = (e: SnapEvent) => syncFromElement(e.snapTargetInline);
+      const onChange = (e: SnapEvent) => syncFromElement(e.snapTargetInline);
+      container.addEventListener("scrollsnapchanging", onChanging as EventListener);
+      container.addEventListener("scrollsnapchange", onChange as EventListener);
+      return () => {
+        container.removeEventListener("scrollsnapchanging", onChanging as EventListener);
+        container.removeEventListener("scrollsnapchange", onChange as EventListener);
+      };
+    }
+
+    if ("onscrollend" in window) {
+      container.addEventListener("scrollend", syncFromScrollLeft);
+      return () => container.removeEventListener("scrollend", syncFromScrollLeft);
+    }
 
     let timer: ReturnType<typeof setTimeout>;
-    container.addEventListener("scroll", onScroll, { passive: true });
-    if ("onscrollend" in window) container.addEventListener("scrollend", syncDayIndex);
-
+    const onScrollFallback = () => {
+      clearTimeout(timer);
+      timer = setTimeout(syncFromScrollLeft, 150);
+    };
+    container.addEventListener("scroll", onScrollFallback, { passive: true });
     return () => {
-      container.removeEventListener("scroll", onScroll);
-      if ("onscrollend" in window) container.removeEventListener("scrollend", syncDayIndex);
+      container.removeEventListener("scroll", onScrollFallback);
       clearTimeout(timer);
     };
-  }, [updateIndicator]);
+  }, []);
 
   useEffect(() => {
     localStorage.setItem(YEAR_STORAGE_KEY, String(year));
@@ -193,6 +232,7 @@ export function App() {
                 pillButtonRefs.current[i] = el;
               }}
               type="button"
+              aria-current={isSelected ? "true" : undefined}
               onClick={() => setDayIndex(i)}
               className={
                 "relative z-10 flex-1 rounded-full px-2 py-1.5 text-sm font-medium transition-colors " +
