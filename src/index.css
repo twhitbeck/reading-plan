@@ -6,12 +6,3 @@
   }
 }
 
-/* Hide scrollbar and prevent browser back/forward swipe on the carousel */
-.carousel {
-  scrollbar-width: none;
-  overscroll-behavior-x: contain;
-}
-
-.carousel::-webkit-scrollbar {
-  display: none;
-}

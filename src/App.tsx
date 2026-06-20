@@ -165,7 +165,7 @@ export function App() {
 
       <div
         ref={carouselRef}
-        className="carousel flex snap-x snap-mandatory overflow-x-auto rounded-lg border border-slate-200 bg-slate-50 shadow-sm dark:border-slate-700 dark:bg-slate-800"
+        className="flex snap-x snap-mandatory overflow-x-auto overscroll-x-contain scrollbar-none rounded-lg border border-slate-200 bg-slate-50 shadow-sm dark:border-slate-700 dark:bg-slate-800"
       >
         {READING_DAY_LABELS.map((label, i) => {
           const reading = weekData.readings[i];
