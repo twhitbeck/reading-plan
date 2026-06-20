@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import plan from "./plan.json";
 
 const YEAR_STORAGE_KEY = "reading-plan-year";
@@ -41,6 +41,26 @@ export function App() {
   const defaultWeek = Math.min(Math.max(getCurrentWeekOfYear(today) - 1, 1), maxWeek);
   const [week, setWeek] = useState<number>(defaultWeek);
   const [dayIndex, setDayIndex] = useState<number>(initialReadingIndex);
+  const swipeDir = useRef<"left" | "right" | null>(null);
+  const touchStartX = useRef<number | null>(null);
+
+  function goToDay(next: number) {
+    swipeDir.current = next > dayIndex ? "left" : "right";
+    setDayIndex(next);
+  }
+
+  function handleTouchStart(e: React.TouchEvent) {
+    touchStartX.current = e.touches[0].clientX;
+  }
+
+  function handleTouchEnd(e: React.TouchEvent) {
+    if (touchStartX.current === null) return;
+    const delta = e.changedTouches[0].clientX - touchStartX.current;
+    touchStartX.current = null;
+    if (Math.abs(delta) < 40) return;
+    if (delta < 0 && dayIndex < PILL_LABELS.length - 1) goToDay(dayIndex + 1);
+    else if (delta > 0 && dayIndex > 0) goToDay(dayIndex - 1);
+  }
 
   useEffect(() => {
     localStorage.setItem(YEAR_STORAGE_KEY, String(year));
@@ -99,7 +119,7 @@ export function App() {
             <button
               key={label}
               type="button"
-              onClick={() => setDayIndex(i)}
+              onClick={() => goToDay(i)}
               className={
                 "relative flex-1 rounded-full px-2 py-1.5 text-sm font-medium transition " +
                 (isSelected
@@ -122,7 +142,15 @@ export function App() {
         })}
       </div>
 
-      <div className="rounded-lg border border-slate-200 bg-slate-50 p-6 shadow-sm dark:border-slate-700 dark:bg-slate-800">
+      <div
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchEnd}
+        className="overflow-hidden rounded-lg border border-slate-200 bg-slate-50 shadow-sm dark:border-slate-700 dark:bg-slate-800"
+      >
+      <div
+        key={dayIndex}
+        className={"p-6 " + (swipeDir.current === "left" ? "slide-from-right" : swipeDir.current === "right" ? "slide-from-left" : "")}
+      >
         <h2 className="mb-4 text-sm font-medium uppercase tracking-wider text-slate-500 dark:text-slate-400">
           {READING_DAY_LABELS[dayIndex]}
         </h2>
@@ -150,6 +178,7 @@ export function App() {
             Read all
           </a>
         )}
+      </div>
       </div>
     </div>
   );

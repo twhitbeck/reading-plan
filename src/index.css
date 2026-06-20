@@ -5,3 +5,21 @@
     @apply bg-white text-slate-800 dark:bg-slate-900 dark:text-slate-100;
   }
 }
+
+@keyframes slideInFromRight {
+  from { transform: translateX(60px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInFromLeft {
+  from { transform: translateX(-60px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+.slide-from-right {
+  animation: slideInFromRight 0.2s ease-out;
+}
+
+.slide-from-left {
+  animation: slideInFromLeft 0.2s ease-out;
+}
