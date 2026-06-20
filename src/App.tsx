@@ -128,46 +128,23 @@ export function App() {
     };
   }, [updateIndicator]);
 
-  // Sync dayIndex: scrollsnapchanging/scrollsnapchange → scrollend → debounced scroll
+  // Sync dayIndex via scroll snap events:
+  // scrollsnapchanging fires eagerly as the pending snap target changes during drag
+  // scrollsnapchange confirms the final target when the snap settles
   useEffect(() => {
     const container = carouselRef.current;
     if (!container) return;
 
-    const syncFromElement = (target: Element | null) => {
-      if (!target) return;
-      const index = dayRefs.current.indexOf(target as HTMLDivElement);
+    const syncFromElement = (e: SnapEvent) => {
+      const index = dayRefs.current.indexOf(e.snapTargetInline as HTMLDivElement);
       if (index !== -1) setDayIndex(index);
     };
-    const syncFromScrollLeft = () =>
-      setDayIndex(Math.round(container.scrollLeft / container.clientWidth));
 
-    if ("onscrollsnapchange" in container) {
-      // scrollsnapchanging: eagerly update as pending snap target changes during drag
-      // scrollsnapchange: confirm final target when snap settles
-      const onChanging = (e: SnapEvent) => syncFromElement(e.snapTargetInline);
-      const onChange = (e: SnapEvent) => syncFromElement(e.snapTargetInline);
-      container.addEventListener("scrollsnapchanging", onChanging as EventListener);
-      container.addEventListener("scrollsnapchange", onChange as EventListener);
-      return () => {
-        container.removeEventListener("scrollsnapchanging", onChanging as EventListener);
-        container.removeEventListener("scrollsnapchange", onChange as EventListener);
-      };
-    }
-
-    if ("onscrollend" in window) {
-      container.addEventListener("scrollend", syncFromScrollLeft);
-      return () => container.removeEventListener("scrollend", syncFromScrollLeft);
-    }
-
-    let timer: ReturnType<typeof setTimeout>;
-    const onScrollFallback = () => {
-      clearTimeout(timer);
-      timer = setTimeout(syncFromScrollLeft, 150);
-    };
-    container.addEventListener("scroll", onScrollFallback, { passive: true });
+    container.addEventListener("scrollsnapchanging", syncFromElement as EventListener);
+    container.addEventListener("scrollsnapchange", syncFromElement as EventListener);
     return () => {
-      container.removeEventListener("scroll", onScrollFallback);
-      clearTimeout(timer);
+      container.removeEventListener("scrollsnapchanging", syncFromElement as EventListener);
+      container.removeEventListener("scrollsnapchange", syncFromElement as EventListener);
     };
   }, []);
 
