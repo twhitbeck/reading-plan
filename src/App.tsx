@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
 import plan from "./plan.json";
 
 const YEAR_STORAGE_KEY = "reading-plan-year";
@@ -46,6 +46,51 @@ export function App() {
   const dayRefs = useRef<(HTMLDivElement | null)[]>([]);
   const isFirstRender = useRef(true);
 
+  // Pill indicator refs
+  const pillsRef = useRef<HTMLDivElement>(null);
+  const indicatorRef = useRef<HTMLDivElement>(null);
+  const pillButtonRefs = useRef<(HTMLButtonElement | null)[]>([]);
+
+  // Position the indicator to match scroll progress (0–4)
+  const updateIndicator = useCallback((progress: number) => {
+    const indicator = indicatorRef.current;
+    const pillsContainer = pillsRef.current;
+    if (!indicator || !pillsContainer) return;
+
+    const clamped = Math.max(0, Math.min(progress, PILL_LABELS.length - 1));
+    const leftIdx = Math.floor(clamped);
+    const rightIdx = Math.min(leftIdx + 1, PILL_LABELS.length - 1);
+    const frac = clamped - leftIdx;
+
+    const leftPill = pillButtonRefs.current[leftIdx];
+    const rightPill = pillButtonRefs.current[rightIdx];
+    if (!leftPill || !rightPill) return;
+
+    const containerLeft = pillsContainer.getBoundingClientRect().left;
+    const x0 = leftPill.getBoundingClientRect().left - containerLeft;
+    const x1 = rightPill.getBoundingClientRect().left - containerLeft;
+
+    indicator.style.transform = `translateX(${x0 + frac * (x1 - x0)}px)`;
+    indicator.style.width = `${leftPill.offsetWidth}px`;
+  }, []);
+
+  // Set indicator position before first paint to avoid flash
+  useLayoutEffect(() => {
+    updateIndicator(initialReadingIndex);
+  }, [initialReadingIndex, updateIndicator]);
+
+  // Re-measure indicator on pill bar resize (e.g. viewport width change)
+  useEffect(() => {
+    const pills = pillsRef.current;
+    if (!pills) return;
+    const observer = new ResizeObserver(() => {
+      const carousel = carouselRef.current;
+      updateIndicator(carousel ? carousel.scrollLeft / carousel.clientWidth : 0);
+    });
+    observer.observe(pills);
+    return () => observer.disconnect();
+  }, [updateIndicator]);
+
   // Scroll to active day when dayIndex changes (pill button click)
   useEffect(() => {
     const el = dayRefs.current[dayIndex];
@@ -59,33 +104,33 @@ export function App() {
     isFirstRender.current = false;
   }, [dayIndex]);
 
-  // Sync active pill when user swipes
+  // Drive indicator in real-time during swipe; sync dayIndex at scroll end
   useEffect(() => {
     const container = carouselRef.current;
     if (!container) return;
 
-    const syncIndex = () => {
-      const index = Math.round(container.scrollLeft / container.clientWidth);
-      setDayIndex(index);
+    const syncDayIndex = () => {
+      setDayIndex(Math.round(container.scrollLeft / container.clientWidth));
     };
 
-    // scrollend is not yet in older Safari; fall back to a debounced scroll event
-    if ("onscrollend" in window) {
-      container.addEventListener("scrollend", syncIndex);
-      return () => container.removeEventListener("scrollend", syncIndex);
-    } else {
-      let timer: ReturnType<typeof setTimeout>;
-      const onScroll = () => {
+    const onScroll = () => {
+      updateIndicator(container.scrollLeft / container.clientWidth);
+      if (!("onscrollend" in window)) {
         clearTimeout(timer);
-        timer = setTimeout(syncIndex, 150);
-      };
-      container.addEventListener("scroll", onScroll);
-      return () => {
-        container.removeEventListener("scroll", onScroll);
-        clearTimeout(timer);
-      };
-    }
-  }, []);
+        timer = setTimeout(syncDayIndex, 150);
+      }
+    };
+
+    let timer: ReturnType<typeof setTimeout>;
+    container.addEventListener("scroll", onScroll, { passive: true });
+    if ("onscrollend" in window) container.addEventListener("scrollend", syncDayIndex);
+
+    return () => {
+      container.removeEventListener("scroll", onScroll);
+      if ("onscrollend" in window) container.removeEventListener("scrollend", syncDayIndex);
+      clearTimeout(timer);
+    };
+  }, [updateIndicator]);
 
   useEffect(() => {
     localStorage.setItem(YEAR_STORAGE_KEY, String(year));
@@ -132,20 +177,28 @@ export function App() {
         </label>
       </div>
 
-      <div className="mb-4 flex gap-1.5">
+      {/* Pill bar with sliding indicator */}
+      <div ref={pillsRef} className="relative mb-4 flex gap-1.5">
+        <div
+          ref={indicatorRef}
+          className="pointer-events-none absolute inset-y-0 rounded-full bg-sky-700 shadow-sm dark:bg-sky-600"
+        />
         {PILL_LABELS.map((label, i) => {
           const isSelected = i === dayIndex;
           const isToday = i === todayReadingIndex;
           return (
             <button
               key={label}
+              ref={(el) => {
+                pillButtonRefs.current[i] = el;
+              }}
               type="button"
               onClick={() => setDayIndex(i)}
               className={
-                "relative flex-1 rounded-full px-2 py-1.5 text-sm font-medium transition " +
+                "relative z-10 flex-1 rounded-full px-2 py-1.5 text-sm font-medium transition-colors " +
                 (isSelected
-                  ? "bg-sky-700 text-white shadow-sm dark:bg-sky-600"
-                  : "bg-slate-100 text-slate-700 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-300 dark:hover:bg-slate-700")
+                  ? "text-white"
+                  : "text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-100")
               }
             >
               {label}
@@ -163,9 +216,10 @@ export function App() {
         })}
       </div>
 
+      {/* Carousel — each panel carries its own card styling so the whole card swipes */}
       <div
         ref={carouselRef}
-        className="flex snap-x snap-mandatory overflow-x-auto overscroll-x-contain scrollbar-none rounded-lg border border-slate-200 bg-slate-50 shadow-sm dark:border-slate-700 dark:bg-slate-800"
+        className="flex snap-x snap-mandatory overflow-x-auto overscroll-x-contain scrollbar-none"
       >
         {READING_DAY_LABELS.map((label, i) => {
           const reading = weekData.readings[i];
@@ -178,35 +232,37 @@ export function App() {
               ref={(el) => {
                 dayRefs.current[i] = el;
               }}
-              className="w-full shrink-0 snap-start p-6"
+              className="w-full shrink-0 snap-start"
             >
-              <h2 className="mb-4 text-sm font-medium uppercase tracking-wider text-slate-500 dark:text-slate-400">
-                {label}
-              </h2>
-              <ul className="space-y-2 text-lg">
-                {items.map((item) => (
-                  <li key={item}>
-                    <a
-                      className="text-sky-700 underline decoration-sky-300 underline-offset-4 hover:text-sky-900 hover:decoration-sky-700 dark:text-sky-400 dark:decoration-sky-600 dark:hover:text-sky-200 dark:hover:decoration-sky-400"
-                      href={biblegatewayUrl(item)}
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      {item}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-              {items.length > 1 && (
-                <a
-                  className="mt-4 inline-block text-sm text-sky-700 underline decoration-sky-300 underline-offset-4 hover:text-sky-900 hover:decoration-sky-700 dark:text-sky-400 dark:decoration-sky-600 dark:hover:text-sky-200 dark:hover:decoration-sky-400"
-                  href={biblegatewayUrl(items.join("; "))}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Read all
-                </a>
-              )}
+              <div className="rounded-lg border border-slate-200 bg-slate-50 p-6 shadow-sm dark:border-slate-700 dark:bg-slate-800">
+                <h2 className="mb-4 text-sm font-medium uppercase tracking-wider text-slate-500 dark:text-slate-400">
+                  {label}
+                </h2>
+                <ul className="space-y-2 text-lg">
+                  {items.map((item) => (
+                    <li key={item}>
+                      <a
+                        className="text-sky-700 underline decoration-sky-300 underline-offset-4 hover:text-sky-900 hover:decoration-sky-700 dark:text-sky-400 dark:decoration-sky-600 dark:hover:text-sky-200 dark:hover:decoration-sky-400"
+                        href={biblegatewayUrl(item)}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        {item}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+                {items.length > 1 && (
+                  <a
+                    className="mt-4 inline-block text-sm text-sky-700 underline decoration-sky-300 underline-offset-4 hover:text-sky-900 hover:decoration-sky-700 dark:text-sky-400 dark:decoration-sky-600 dark:hover:text-sky-200 dark:hover:decoration-sky-400"
+                    href={biblegatewayUrl(items.join("; "))}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Read all
+                  </a>
+                )}
+              </div>
             </div>
           );
         })}
