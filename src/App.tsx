@@ -58,7 +58,8 @@ export function App() {
   const yearData = plan.years.find((y) => y.year === year) ?? plan.years[0];
   const maxWeek = yearData.weeks.length;
 
-  const defaultWeek = Math.min(Math.max(getCurrentWeekOfYear(today) - 1, 1), maxWeek);
+  const weekOffset = dayOfWeek === 0 ? 0 : -1;
+  const defaultWeek = Math.min(Math.max(getCurrentWeekOfYear(today) + weekOffset, 1), maxWeek);
   const [week, setWeek] = useState<number>(defaultWeek);
   const [dayIndex, setDayIndex] = useState<number>(initialReadingIndex);
 
