@@ -9,6 +9,12 @@ const PILL_LABELS = ["Mon", "Tue", "Wed", "Thu", "Fri"];
 // Sun→0, Mon→0, Tue→1, Wed→2, Thu→3, Fri→4, Sat→4
 const DAY_TO_READING_INDEX = [0, 0, 1, 2, 3, 4, 4];
 
+const READING_DATE_FORMATTER = new Intl.DateTimeFormat(undefined, {
+  month: "long",
+  day: "numeric",
+  year: "numeric",
+});
+
 function getCurrentWeekOfYear(date: Date): number {
   // ISO 8601 week number: weeks start Monday, week 1 contains the first Thursday.
   const d = new Date(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()));
@@ -16,6 +22,20 @@ function getCurrentWeekOfYear(date: Date): number {
   d.setUTCDate(d.getUTCDate() + 4 - dayNum);
   const yearStart = new Date(Date.UTC(d.getUTCFullYear(), 0, 1));
   return Math.ceil(((d.getTime() - yearStart.getTime()) / 86400000 + 1) / 7);
+}
+
+function getReadingDate(calendarYear: number, week: number, dayIndex: number): Date {
+  const firstReadingDay = new Date(calendarYear, 0, 1, 12);
+  const daysUntilMonday = (8 - firstReadingDay.getDay()) % 7;
+  firstReadingDay.setDate(firstReadingDay.getDate() + daysUntilMonday + (week - 1) * 7 + dayIndex);
+  return firstReadingDay;
+}
+
+function formatDateTime(date: Date): string {
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, "0");
+  const day = String(date.getDate()).padStart(2, "0");
+  return `${year}-${month}-${day}`;
 }
 
 function biblegatewayUrl(reading: string): string {
@@ -48,6 +68,7 @@ export function App() {
 
   const weekData = yearData.weeks.find((w) => w.week_number === week) ?? yearData.weeks[0];
   const reading = weekData.readings[dayIndex];
+  const readingDate = getReadingDate(today.getFullYear(), weekData.week_number, dayIndex);
   const items = [reading.ot, reading.nt, reading.psalm_proverb].filter(
     (item): item is string => item != null,
   );
@@ -123,8 +144,11 @@ export function App() {
       </div>
 
       <div className="rounded-lg border border-slate-200 bg-slate-50 p-6 shadow-sm dark:border-slate-700 dark:bg-slate-800">
-        <h2 className="mb-4 text-sm font-medium uppercase tracking-wider text-slate-500 dark:text-slate-400">
-          {READING_DAY_LABELS[dayIndex]}
+        <h2 className="mb-4 flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 text-sm font-medium text-slate-500 dark:text-slate-400">
+          <span className="uppercase tracking-wider">{READING_DAY_LABELS[dayIndex]}</span>
+          <time dateTime={formatDateTime(readingDate)}>
+            {READING_DATE_FORMATTER.format(readingDate)}
+          </time>
         </h2>
         <ul className="space-y-2 text-lg">
           {items.map((item) => (
