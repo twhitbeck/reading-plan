@@ -6,8 +6,8 @@ const YEAR_STORAGE_KEY = "reading-plan-year";
 const READING_DAY_LABELS = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
 const PILL_LABELS = ["Mon", "Tue", "Wed", "Thu", "Fri"];
 
-// Sun→0, Mon→0, Tue→1, Wed→2, Thu→3, Fri→4, Sat→4
-const DAY_TO_READING_INDEX = [0, 0, 1, 2, 3, 4, 4];
+// Sun→4, Mon→0, Tue→1, Wed→2, Thu→3, Fri→4, Sat→4
+const DAY_TO_READING_INDEX = [4, 0, 1, 2, 3, 4, 4];
 
 const READING_DATE_FORMATTER = new Intl.DateTimeFormat(undefined, {
   month: "long",
@@ -58,8 +58,7 @@ export function App() {
   const yearData = plan.years.find((y) => y.year === year) ?? plan.years[0];
   const maxWeek = yearData.weeks.length;
 
-  const weekOffset = dayOfWeek === 0 ? 0 : -1;
-  const defaultWeek = Math.min(Math.max(getCurrentWeekOfYear(today) + weekOffset, 1), maxWeek);
+  const defaultWeek = Math.min(Math.max(getCurrentWeekOfYear(today) - 1, 1), maxWeek);
   const [week, setWeek] = useState<number>(defaultWeek);
   const [dayIndex, setDayIndex] = useState<number>(initialReadingIndex);
 
